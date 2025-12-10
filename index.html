@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Saudi Tourism</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background-color: #0f3b1d;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background-image: url('dasa.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 90px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      background-color: rgba(255, 255, 255, 0.85);
+      display: inline-block;
+      padding: 12px 35px;
+      border-radius: 8px;
+      color: #1b4d2b;
+      font-size: 32px;
+    }
+
+    /* ===== NAV ===== */
+    nav {
+      background-color: white;
+      text-align: center;
+      padding: 12px;
+      border-top: 2px solid #d9ce54;
+      border-bottom: 2px solid #d9ce54;
+    }
+
+    nav a {
+      color: #0d3d19;
+      text-decoration: none;
+      margin: 0 25px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== CONTENT ===== */
+    .content {
+      background-color: #f2f5f2;
+      width: 80%;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    .content h2 {
+      color: #143219;
+    }
+
+    .content p {
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    /* ===== HOME IMAGE ===== */
+    .saudi-img {
+      width: 60%;
+      display: block;
+      margin: 40px auto;
+      border-radius: 8px;
+      border: 3px solid #d9ce54;
+    }
+
+    /* ===== TABLE ===== */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 25px;
+      border: 2px solid #d9ce54;
+    }
+
+    th, td {
+      border: 1px solid #d9ce54;
+      padding: 12px;
+      text-align: center;
+      background-color: #31703a;
+      color: white;
+    }
+
+    th {
+      background-color: #143219;
+    }
+
+    /* ===== HIDE SECTIONS ===== */
+    #places, #contact {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header></header>
+
+
+  <!-- ===== NAV ===== -->
+  <nav>
+    <a href="#" onclick="showHome()">Home</a>
+    <a href="#" onclick="showPlaces()">Places</a>
+    <a href="#" onclick="showContact()">Contact</a>
+  </nav>
+
+  <!-- ===== HOME ===== -->
+  <div class="content" id="home">
+    <h2>Discover Saudi Arabia</h2>
+
+    <p>
+      Saudi Arabia is a beautiful country that integrates its culture and its history very well.
+      The rich culture together with the friendly locals makes Saudi Arabia a very good holiday destination.
+      You can explore more by using the Places tool on the navigation menu.
+    </p>
+
+    <img class="saudi-img" src="ghala.jpg">
+  </div>
+
+  <!-- ===== PLACES (TABLE) ===== -->
+  <div class="content" id="places">
+    <h2>Tourist Cities</h2>
+
+    <table>
+  <tr>
+  <th>City</th>
+  <th>Type</th>
+  <th>Famous For</th>
+  <th>More</th>
+</tr>
+
+  <tr>
+    <td>Al-Ula</td>
+    <td>Historical</td>
+    <td>Mountains, Heritage</td>
+    <td><a href="alula.html">Browse</a></td>
+  </tr>
+
+  <tr>
+  <td>Riyadh</td>
+  <td>Capital</td>
+  <td>Skyline, Culture</td>
+  <td>
+    <a href="./riyadh.html" target="_self">Browse</a>
+  </td>
+</tr>
+
+  <tr>
+    <td>Jeddah</td>
+    <td>Coastal</td>
+    <td>Red Sea, Corniche</td>
+    <td><a href="jeddah.html">Browse</a></td>
+  </tr>
+
+  <tr>
+    <td>Umluj</td>
+    <td>Beach</td>
+    <td>Clear Water, Islands</td>
+    <td><a href="umluj.html">Browse</a></td>
+  </tr>
+</table>
+  </div>
+
+  <!-- ===== CONTACT ===== -->
+  <div class="content" id="contact">
+    <h2>Contact Us</h2>
+
+    <form>
+      <p>Name:<br><input type="text"></p>
+      <p>Email:<br><input type="email"></p>
+      <p>Message:<br><textarea rows="4"></textarea></p>
+      <p><button type="submit">Send</button></p>
+    </form>
+  </div>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    function showHome() {
+      document.getElementById("home").style.display = "block";
+      document.getElementById("places").style.display = "none";
+      document.getElementById("contact").style.display = "none";
+    }
+
+    function showPlaces() {
+      document.getElementById("home").style.display = "none";
+      document.
+      getElementById("places").style.display = "block";
+      document.getElementById("contact").style.display = "none";
+    }
+
+    function showContact() {
+      document.getElementById("home").style.display = "none";
+      document.getElementById("places").style.display = "none";
+      document.getElementById("contact").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
